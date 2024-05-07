@@ -36,17 +36,18 @@ public class Contador {
 		try {
 			contar(num1, num2);
 		} catch (ParametrosInvalidosException e) {
-			System.out.println(e.getMessage());
+			System.out.println(e.getMessage() + "\n");
+			contador();
 		}
 	}
 	
 	
 	private void contar(int parametro1, int parametro2)throws ParametrosInvalidosException {
-		if (parametro1 >= parametro2){
-			throw new ParametrosInvalidosException("O segundo parâmetro deve ser maior que o primeiro.");
+		if (parametro1 > parametro2){
+			throw new ParametrosInvalidosException(" !-O segundo parâmetro deve ser maior que o primeiro.-!");
 			
 		}else {
-			for (int x = getParametro1(); x <= getParametro2(); x++) {
+			for (int x = getParametro1(); x < getParametro2(); x++) {
 				System.out.println("Imprimindo o número " + x);
 			}
 		}
